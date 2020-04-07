@@ -1,9 +1,4 @@
 "use strict";
-if (!Math.hypot) {
-    Math.hypot = function (x, y) {
-        return Math.sqrt(x * x + y * y);
-    };
-}
 var context = document.querySelector("canvas").getContext("2d");
 var Game = {
     Width: context.canvas.width,
@@ -29,7 +24,6 @@ var CountOfClick = 0;
 var GameOver = false, GameWin = false;
 var CircleR = 3;
 var speed = 0.025;
-var TimeOut = 0;
 
 for (var i = 0; i < 15; i++) { // 15 is count of circles
     circles.push(new Circle(i));
